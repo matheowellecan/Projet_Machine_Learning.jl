@@ -1,6 +1,7 @@
 
 mutable struct LogReg <: AbstractModel
-    weights::Vector{Float64} #Poids de la régression logistique
+    weights::Vector#Poids de la régression logistique
+    max_iter::Int64
 end
 
-LogReg(;weights=[0])=LogReg()
+LogReg(;weights=[0],max_iter=100)=LogReg(weights,max_iter)
